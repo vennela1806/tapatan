@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url("../assets/images/Philosopher-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-image: url("../assets/images/bg.jpg");
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: myFont;
+}
+
+@media screen and (max-width: 1280px) {
+  .content-w3ls {
+    margin: 4em auto;
+  }
+}
+
+.content-w3ls {
+  width: 500px;
+  /* margin: 10em auto; */
+}
+
+.content-bottom {
+  margin: 0 1em;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 384px) {
+  label.switch {
+    padding-left: 2.5em;
+  }
+}
+
+form .field-group {
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  margin-bottom: 5%;
+  padding: 2px 10px 2px 0;
+  border-radius: 10px;
+}
+
+form .field-group:focus-visible {
+  outline: 2px solid #78a618;
+}
+
+form .field-group span {
+  flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 12vw;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  color: #fff;
+  background: transparent;
+  line-height: 50px;
+  text-align: right;
+}
+
+form .field-group .wthree-field {
+  flex: 4 50%;
+  -webkit-box-flex: 4 50%;
+  -moz-box-flex: 4 50%;
+  -webkit-flex: 4 50%;
+  -ms-flex: 4 50%;
+}
+
+.wthree-field button.btn {
+  background: hsl(345deg 100% 47%);
+  border: none;
+  color: #fff;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 100%;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s all;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.wthree-field input {
+  padding: 14px 0 12px 15px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 1px;
+  border: none;
+  background: transparent;
+  box-sizing: border-box;
+  font-family: "myFont";
+  width: 100%;
+  outline: none;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+::-moz-placeholder {
+  color: #fff;
+}
+::-ms-input-placeholder {
+  color: #fff;
+}
+::-moz-placeholder {
+  color: #fff;
+}
+
+.list-login-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px #000000;
+  color: #fff !important;
+}
+
+.loginh {
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.register-eye-symbol-container {
+  position: relative;
+}
+
+.register-eye-symbol {
+  position: absolute;
+  top: 0.2rem;
+  right: 1.125rem;
+  cursor: pointer;
+}
+
+.login-eye-symbol-container {
+  position: relative;
+}
+
+.login-eye-symbol {
+  position: absolute;
+  top: 0.2rem;
+  right: 1.125rem;
+  cursor: pointer;
+}
+
+.alertwarn {
+  padding: 1px;
+  margin-top: -1rem;
+  color: rgba(222, 30, 30, 0.809);
+  font-size: 18px;
+  line-height: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.signin {
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+input::placeholder {
+  color: #c1c6ba;
+}
+
+.custom-toast {
+  transform: translateY(30px);
+}

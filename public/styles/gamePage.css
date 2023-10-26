@@ -1,0 +1,620 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600&family=Poppins:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-bg {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+  height: 84vh;
+  background-image: url("../assets/images/bg.jpg");
+}
+
+.game-adtag {
+  color: #ffffff;
+  color: white;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: 600;
+}
+
+.game-navicons {
+  color: #ffffff;
+}
+
+.game-ficons {
+  padding: 1rem;
+}
+
+.ficonst {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+
+.game-yanimg {
+  width: 2em;
+  padding-bottom: 5px;
+}
+
+.card {
+  width: 17rem;
+  cursor: pointer;
+  margin: 1rem;
+  background: #e49545;
+  border-radius: 2px;
+  border: 3px solid #c12c3f;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+/* .card12 {
+  background: #c12c3f;
+  color: #ffffff;
+  margin: 0.4rem;
+  border-radius: 2px;
+  border: 5px solid rgb(188, 129, 71) 5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+} */
+
+/* .gameimg {
+  margin: 10px;
+  width: 3vw;
+}
+
+.gameimg2 {
+  margin: 10px;
+  width: 2.5vw;
+} */
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.back-button {
+  color: whitesmoke;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.rank {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.game-hint {
+  color: whitesmoke;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.turn {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reset {
+  color: whitesmoke;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.game-menuicons-container {
+  text-align: center;
+  background-image: url("../assets/images/bg.jpg");
+}
+
+.game-menuicons {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.robo-img {
+  width: 53px;
+  height: 53px;
+  position: absolute;
+  text-align: center;
+  padding-right: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: -90px;
+}
+
+.robo-img-first {
+  left: 18%;
+}
+
+.robo-img-second {
+  left: 40%;
+}
+
+.robo-img-last {
+  right: 20%;
+}
+
+.player-img-last {
+  right: 20%;
+}
+
+.player-img-first {
+  left: 20%;
+}
+
+.player-img-second {
+  left: 43%;
+}
+
+.player-img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  text-align: center;
+  padding-right: 4px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.grid {
+  position: relative;
+  margin-left: 16px;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+  border: 1px solid whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/cellimage.jpg");
+  cursor: pointer;
+}
+
+.cell-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.cell-row:last-child {
+  margin-bottom: 0px;
+}
+
+.placeNumber {
+  font-size: 25px;
+  color: darkmagenta;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.player-img.player-cell1 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: -19px;
+  transform: translate(20%, 2%);
+}
+
+.player-img.player-cell2 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: -22px;
+  left: 40%;
+  transform: translate(10%, 9%);
+}
+
+.player-img.player-cell3 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: -22px;
+  left: 79%;
+  transform: translate(2%, 10%);
+}
+
+.player-img.player-cell4 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 32%;
+  transform: translate(15%, -1%);
+}
+
+.player-img.player-cell5 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 31%;
+  left: 40%;
+  transform: translate(8%, 3%);
+}
+
+.player-img.player-cell6 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 30%;
+  left: 79%;
+  transform: translate(2%, 8%);
+}
+
+.player-img.player-cell7 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 69%;
+  transform: translate(15%, -1%);
+}
+
+.player-img.player-cell8 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 69%;
+  left: 40%;
+  transform: translate(7%, 1%);
+}
+
+.player-img.player-cell9 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 69%;
+  left: 79%;
+  transform: translate(-2, 3%);
+}
+
+.robo-img.robo-cell1 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 34%;
+  transform: translate(12%, 2%);
+}
+
+.robo-img.robo-cell2 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 34%;
+  left: 38%;
+  transform: translate(15%, 5%);
+}
+
+.robo-img.robo-cell3 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 34%;
+  left: 76%;
+  transform: translate(10%, 2%);
+}
+
+.robo-img.robo-cell4 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 72%;
+  transform: translate(7%, 2%);
+}
+
+.robo-img.robo-cell5 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 72%;
+  left: 38%;
+  transform: translate(16%, 2%);
+}
+
+.robo-img.robo-cell6 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 72%;
+  left: 76%;
+  transform: translate(15%, 2%);
+}
+
+.robo-img.robo-cell7 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  top: 108%;
+  transform: translate(13%, 8%);
+}
+.robo-img.robo-cell8 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 108%;
+  left: 38%;
+  transform: translate(15%, 0);
+}
+
+.robo-img.robo-cell9 {
+  top: unset;
+  left: unset;
+  bottom: unset;
+  right: unset;
+  transform: unset;
+  position: absolute;
+  position: absolute;
+  top: 108%;
+  left: 76%;
+  transform: translate(16%, 9%);
+}
+
+.selected-img {
+  box-shadow: 0 0 15px green;
+  border: 5px solid green;
+}
+
+.selected-move {
+  box-shadow: 0 0 8px black;
+}
+
+.wincard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #82aa29 !important;
+  padding: 2rem 1rem;
+  border: 0rem solid #b8bbb3;
+  border-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      #b8bbb3 6px,
+      #b8bbb3 15px,
+      transparent 16px,
+      transparent 20px
+    )
+    20/1rem;
+}
+
+.losscard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(160, 21, 21) !important;
+  padding: 2rem 1rem;
+  border: 0rem solid #b8bbb3;
+  border-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      #b8bbb3 6px,
+      #b8bbb3 15px,
+      transparent 16px,
+      transparent 20px
+    )
+    20/1rem;
+}
+
+.close {
+  position: absolute;
+  top: -23px;
+  right: -20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.vicotrycard {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+}
+.again {
+  color: #6afb69;
+  cursor: pointer;
+}
+
+.star {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.confetti {
+  width: 40px;
+  height: 30px;
+  background-color: #f2d74e;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  position: absolute;
+  left: 50%;
+  animation: confetti 5s ease-in-out -2s infinite;
+  transform-origin: left top;
+}
+.confetti:nth-child(1) {
+  background-color: #f2d74e;
+  left: 10%;
+  animation-delay: 0;
+}
+.confetti:nth-child(2) {
+  background-color: #95c3de;
+  left: 20%;
+  animation-delay: -5s;
+}
+.confetti:nth-child(3) {
+  background-color: #ff9a91;
+  left: 30%;
+  animation-delay: -3s;
+}
+.confetti:nth-child(4) {
+  background-color: #5bca4c;
+  left: 40%;
+  animation-delay: -2.5s;
+}
+.confetti:nth-child(5) {
+  background-color: #de566f;
+  left: 50%;
+  animation-delay: -4s;
+}
+.confetti:nth-child(6) {
+  background-color: #b42579;
+  left: 60%;
+  animation-delay: -6s;
+}
+.confetti:nth-child(7) {
+  background-color: #bca328;
+  left: 70%;
+  animation-delay: -1.5s;
+}
+.confetti:nth-child(8) {
+  background-color: #032335;
+  left: 80%;
+  animation-delay: -2s;
+}
+.confetti:nth-child(9) {
+  background-color: #0dd5dc;
+  left: 90%;
+  animation-delay: -3.5s;
+}
+.confetti:nth-child(10) {
+  background-color: #574fc6;
+  left: 100%;
+  animation-delay: -2.5s;
+}
+
+@keyframes confetti {
+  0% {
+    transform: rotateZ(15deg) rotateY(0deg) translate(0, 0);
+  }
+  25% {
+    transform: rotateZ(5deg) rotateY(360deg) translate(-5vw, 20vh);
+  }
+  50% {
+    transform: rotateZ(15deg) rotateY(720deg) translate(5vw, 60vh);
+  }
+  75% {
+    transform: rotateZ(5deg) rotateY(1080deg) translate(-10vw, 80vh);
+  }
+  100% {
+    transform: rotateZ(15deg) rotateY(1440deg) translate(10vw, 110vh);
+  }
+}
+
+.stars {
+  overflow: hidden;
+}
+
+audio {
+  visibility: hidden;
+}
+nav {
+  position: absolute;
+  z-index: 100000 !important;
+}
+
+.gamemodelimg {
+  height: 300px;
+  width: 300px;
+}
+
+.wonPlayer {
+  transform: scale(1.1);
+  box-shadow: 0 0 70px green;
+  border: 5px solid green;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wonBot {
+  transform: scale(1.1);
+  box-shadow: 0 0 70px green;
+  border: 5px solid green;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid-container {
+  background-image: url("../assets/images/gridBg.png");
+}

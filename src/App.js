@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import LoginForm from "./Components/authentication/login";
+import Register from "./Components/authentication/register";
+import Game from "./Components/gamePage/game";
+import StartGame from "./Components/gamePage/startGame";
+import ProtectedRoute from "./ProtectedRoute";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const protect = (component) => <ProtectedRoute>{component}</ProtectedRoute>;
+
+class App extends Component {
+  state = {};
+
+  render() {
+    return (
+      <>
+        <ToastContainer />
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<LoginForm />} />
+            <Route exact path="/loginForm" element={<LoginForm />} />
+            <Route exact path="/RegisterForm" element={<Register />} />
+            {/* <Route exact path="/game" element={<Game />} />
+            <Route exact path="/startGame" element={<StartGame />} /> */}
+
+            <Route path="/game" element={protect(<Game />)} />
+            <Route path="/startGame" element={protect(<StartGame />)} />
+          </Routes>
+        </Router>
+      </>
+    );
+  }
 }
 
 export default App;
