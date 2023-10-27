@@ -13,14 +13,12 @@ export async function startGame(firstPlayer) {
 
   if (data) {
     var dd = helpers.decryptobj(data.data);
-    console.log(dd, "bot  ");
     return dd;
   }
 }
 
 export async function makeMove(gameId, player, member, position) {
   const Obj = { gameId, player, member, position };
-  console.log(Obj);
   const drreqpob = helpers.encryptobj(Obj);
 
   const data = await http.post(apiEndpoint + "/game/make_move", {
@@ -28,7 +26,6 @@ export async function makeMove(gameId, player, member, position) {
   });
   if (data) {
     var dd = helpers.decryptobj(data.data);
-    console.log(dd, "user");
     return dd;
   }
 }

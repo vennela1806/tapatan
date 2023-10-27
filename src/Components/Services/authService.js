@@ -29,16 +29,13 @@ export function logout() {
 
 export async function login(email, password) {
   const loginObj = { email, password };
-  console.log(loginObj);
   const drreqpob = helpers.encryptobj(loginObj);
   const data = await http.post(apiEndpoint + "/user/login", {
     enc: drreqpob,
   });
-  console.log(data);
   localStorage.setItem(tokenKey, data.data);
   http.setJwt(getJwt());
 
-  console.log(helpers.decryptobj(data.data));
   return data.data;
 }
 
@@ -54,9 +51,7 @@ export async function register(
   const data = await http.post(apiEndpoint + "/user/register", {
     enc: drreqpob,
   });
-  console.log(data);
   var dd = helpers.decryptobj(data.data);
-  console.log(dd);
 }
 
 export default {

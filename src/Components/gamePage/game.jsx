@@ -99,7 +99,6 @@ class Game extends Component {
           selectedImg.charAt(selectedImg.length - 1),
           selectedPosition
         );
-        console.log(response, "user");
         const positionToClass = {
           1: "player-cell1",
           2: "player-cell2",
@@ -174,7 +173,6 @@ class Game extends Component {
     try {
       const { gameId } = this.state;
       const response = await gameServices.reset(gameId);
-      console.log(response);
       this.setState({
         playerImg1: "",
         playerImg2: "",

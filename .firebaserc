@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "tapatan-e635a"
+    "default": "tapatan-e635a",
+    "second": "tapatan-9f207"
   }
 }
